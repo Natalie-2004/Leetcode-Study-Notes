@@ -2,6 +2,15 @@
 
 Same account with github
 
+**1. Two Sum**
+
+Link: https://leetcode.com/problems/two-sum/description/
+
+Brute Force: Use double loops to check if the sum meet the target sum. O(n^2)
+
+Idea:
+We only want to iterate once in the array. Use hashmap to record curr index as value, and the difference of number that curr index is pointing to as key while it's iterating. We aim to check if the hashmap contains the value that adds up to meet the target. 
+
 **167. Two Sum II - Input Array Is Sorted**
 
 Link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
@@ -16,4 +25,6 @@ Brute Force did not imply the characteristic of a sorted increasing array. As it
 Link: https://leetcode.com/problems/3sum/description/
 
 Idea:
-This qn has given us an unsorted array, the first step is to make them in order first. Given that we have three indexes to find, i.e. i, j, k and i < j < k, the max length of the iteration of i is range - 2 indeed. This array also need to consider case where there's existence of repeated number. 
+This qn has given us an unsorted array, the first step is to make them in order first. Given that we have three indexes to find, i.e. i, j, k and i < j < k, the max length of the iteration of i is range - 2 indeed. This array also need to consider case where there's existence of repeated number.
+
+
