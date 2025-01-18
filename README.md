@@ -1,7 +1,5 @@
 # Leetcode-Study-Notes
 
-Same account with github
-
 **1. Two Sum**
 
 Link: https://leetcode.com/problems/two-sum/description/
@@ -15,7 +13,7 @@ We only want to iterate once in the array. Use hashmap to record curr index as v
 
 Link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
 
-Brute Force: Iterate from the first number, and add up with the second number to check if matches the sum. O(n^2) -> Used two for loops.
+Brute Force: Iterate from the first number, and add up with the second number to check if it matches the sum. O(n^2) -> Used two for loops.
 
 Idea:
 Brute Force did not imply the characteristic of a sorted increasing array. As it's LHS has the smallest number and RHS has the largest number, we add them up and compare this number with the target sum. We remove the current rightmost number if it's larger than the sum, and the current leftmost number if it's smaller. O(n) -> takes O(1) to remove a number and n times to iterate.
@@ -36,6 +34,10 @@ We start with the head and tail node, which lets the head point to null and the 
 
 Thus, we need to variable to preserve the next pointer on the head before letting it point to null.
 
-Now, we flip the second node's pointer. Similarity, it doesn't know anything about its previous node. As in a single linked list, each node only knows its current value and the next node it's pointing at. Therefore, we need another value to preserve its previous node.
+Now, we flip the second node's pointer. Similarly, it doesn't know anything about its previous node. As in a single linked list, each node only knows its current value and the next node it's pointing at. Therefore, we need another value to preserve its previous node.
 
+**724. Find Pivot Index**
 
+Link: https://leetcode.com/problems/find-pivot-index/description/
+
+Idea: We have two variables accumulating the sum of LHS and RHS to compare them. First, iterate the entire array to get the total sum. We keep track of the left sum at the second iteration. Then, we use rightsum to minus the sum of left sum accumulated and the current value for each index I. If left sum is exactly equals to right sum, we simply return the index of this iteration, indicating we found the pivot index. Otherwise, leftsum is accumulcated with current value. 
