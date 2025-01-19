@@ -40,12 +40,15 @@ Now, we flip the second node's pointer. Similarly, it doesn't know anything abou
 
 Link: https://leetcode.com/problems/find-pivot-index/description/
 
-Idea: We have two variables accumulating the sum of LHS and RHS to compare them. First, iterate the entire array to get the total sum. We keep track of the left sum at the second iteration. Then, we use rightsum to minus the sum of left sum accumulated and the current value for each index I. If left sum is exactly equals to right sum, we simply return the index of this iteration, indicating we found the pivot index. Otherwise, leftsum is accumulated with the current value. 
+Idea: For such qn asking for a particular number within a range (and it's an order, non-repeated array), binary search should be the first soln poped up. Generally, the range of binary search is either [left, right] or [left, right)
+
+We have two variables accumulating the sum of LHS and RHS to compare them. First, iterate the entire array to get the total sum. We keep track of the left sum at the second iteration. Then, we use rightsum to minus the sum of left sum accumulated and the current value for each index I. If left sum is exactly equals to right sum, we simply return the index of this iteration, indicating we found the pivot index. Otherwise, leftsum is accumulated with the current value. 
 
 **69. Sqrt(x)**
 
 Link: https://leetcode.com/problems/sqrtx/description/
 
 Brute Force: the range of x's squared must be within 2 ~ (x-1). We can iterate to check whether x is located exactly between i^2 and (i+1)^2. 
-
 However, this would arise integer overflow when x is very large, int has a limit at 2147483647. To fix this, typecasting int to long. 
+
+Idea: Setting min as 0 and max as the given x. While the differernce of them are greater than 1 (ensure termination whenever min and max are adjacent numbers), we set another middle element which is mid. In addition, we use x / mid < mid (equivalent with x < mid * mid, but avoided integer overflow)to check whether the middle element is greater or less than the sqaure root, then we update max or min accordingly. 
