@@ -52,3 +52,9 @@ Brute Force: the range of x's squared must be within 2 ~ (x-1). We can iterate t
 However, this would arise integer overflow when x is very large, int has a limit at 2147483647. To fix this, typecasting int to long. 
 
 Idea: Setting min as 0 and max as the given x. While the differernce of them are greater than 1 (ensure termination whenever min and max are adjacent numbers), we set another middle element which is mid. In addition, we use x / mid < mid (equivalent with x < mid * mid, but avoided integer overflow)to check whether the middle element is greater or less than the sqaure root, then we update max or min accordingly. 
+
+**1768. Merge Strings Alternately**
+
+Link: https://leetcode.com/problems/merge-strings-alternately/description/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: At first we initialise a new string using string builder, and two variables shorter and longer for recording the min and max size of strings. As well as a flag. The first loop is simply appending A and B's char alternatively to the new string until reach the size of the min string. We then check which string is longer and append all subsequent chars after. 
