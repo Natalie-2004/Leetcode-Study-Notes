@@ -58,3 +58,12 @@ Idea: Setting min as 0 and max as the given x. While the differernce of them are
 Link: https://leetcode.com/problems/merge-strings-alternately/description/?envType=study-plan-v2&envId=leetcode-75
 
 Idea: At first we initialise a new string using string builder, and two variables shorter and longer for recording the min and max size of strings. As well as a flag. The first loop is simply appending A and B's char alternatively to the new string until reach the size of the min string. We then check which string is longer and append all subsequent chars after. 
+
+**1071. Greatest Common Divisor of Strings**
+
+Link: https://leetcode.com/problems/greatest-common-divisor-of-strings/description/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: At first we find out given strings' length respectively. Suppose str1 = nT and str = mT (T is the common strings), we should able to come up with str1 + str2 = nT + mT == T(n+m), which is same as str2 + str1. We also want to make sure that str1 is always longer than str2 to simplify logics. 
+
+If str2 is empty then we should return what str1 is left (base case that used Euclidean rule). GCD of a number and zero is itself. 
+Finally, it check if string1's prefix matches string2, and recursively call this funtion with string1 removing string2's matched prefix and string2 itself. Othewise, no common divsor and return "".
