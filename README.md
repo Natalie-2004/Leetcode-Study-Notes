@@ -67,3 +67,9 @@ Idea: At first we find out given strings' length respectively. Suppose str1 = nT
 
 If str2 is empty then we should return what str1 is left (base case that used Euclidean rule). GCD of a number and zero is itself. 
 Finally, it check if string1's prefix matches string2, and recursively call this funtion with string1 removing string2's matched prefix and string2 itself. Othewise, no common divsor and return "".
+
+**1431. Kids With the Greatest Number of Candies**
+
+Link: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/description/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: First initialise a empty boolean arraylist to store comparing results later on. We then use stream to find the max candies in the array and convert as int. Simply use forloop to compare if the current number of candies + extra candies is greater to the max candies, and append boolean to the arraylist and return. 
