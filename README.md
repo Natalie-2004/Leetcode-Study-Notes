@@ -73,3 +73,12 @@ Finally, it check if string1's prefix matches string2, and recursively call this
 Link: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/description/?envType=study-plan-v2&envId=leetcode-75
 
 Idea: First initialise a empty boolean arraylist to store comparing results later on. We then use stream to find the max candies in the array and convert as int. Simply use forloop to compare if the current number of candies + extra candies is greater to the max candies, and append boolean to the arraylist and return. 
+
+**345. Reverse Vowels of a String**
+
+Link: https://leetcode.com/problems/reverse-vowels-of-a-string/description/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: Tricky Qn. At first i treating it as linked list qn, but in fact it wants us to use double pointers. We can first initialise a hashset and place all lowercases and uppcases vowels inside. As set has function .contains. Then, set up pointers low and high, indicating the leftmost and rightmost position of the string. Initialise a new empty array for answer returning as well. Inside a while loop, we then assign low and high to corresponding chars. There are three cases now:
+  1) the current lowChar are not vowel: directly append to result arr, low++
+  2) the current highChar are not vowel: directly append to result arr, high++
+  3) the pointers contains vowels: swap current lowChar and highChar by assigning them to res[high], res[low]. low++ and high++
