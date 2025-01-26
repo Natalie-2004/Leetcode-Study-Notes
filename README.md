@@ -82,3 +82,15 @@ Idea: Tricky Qn. At first i treating it as linked list qn, but in fact it wants 
   1) the current lowChar are not vowel: directly append to result arr, low++
   2) the current highChar are not vowel: directly append to result arr, high++
   3) the pointers contains vowels: swap current lowChar and highChar by assigning them to res[high], res[low]. low++ and high++
+
+**605. Can Place Flowers**
+
+Link: https://leetcode.com/problems/can-place-flowers/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: Create a loop with size of the the array, checking if current position is empty and it's prev position is also empty and it's next position, yes then plant a flower at current position, and accumulate total flowers planted. Pointing out there're no prev position or next position when current indexing is at the beginning/ending, special cases are considered here. 
+
+**151. Reverse Words in a String**
+
+Link: https://leetcode.com/problems/reverse-words-in-a-string/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: 
