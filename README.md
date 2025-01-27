@@ -93,4 +93,6 @@ Idea: Create a loop with size of the the array, checking if current position is 
 
 Link: https://leetcode.com/problems/reverse-words-in-a-string/?envType=study-plan-v2&envId=leetcode-75
 
-Idea: 
+Idea: We can think this qn in a reverse way as the target is to make 1234 to 4321. I spent a lot of time struggling about splitting the strings and ended up useless. 
+
+At first, we need to read them from right to left order. The hardest thing is to identify when will current index points to the start of each word (a complete word) -> whenever it meets spaces! At the main time, we also want a variable keep track of the position at the end of each word. Hence, we could make up a substring contains such particular word and put it into the result string. It would have the reversed order as the origin string. 
