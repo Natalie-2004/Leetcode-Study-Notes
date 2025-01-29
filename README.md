@@ -107,9 +107,11 @@ There's a loop starts from second element all the way to the last element. Insid
 
 Finally, repeat above step to oervwriting last group into the array. Then return ind. 
 
-`Simulation Example 1: chars = ["a", "a", "b", "b", "c", "c", "c"]`
+Plain word is hard to understand, hence I makeup a table :
 
-| `i` | `currUniqueLett` | `repeatedTime` | `chars[]` (written part) | `index` |
+`Example 1: chars = ["a", "a", "b", "b", "c", "c", "c"]`
+
+| `i` | `currUniqueLett` | `repeatedTime` | `chars[]` (to overwrite) | `index` |
 |----|----------------|--------------|----------------------|--------|
 | 1  | `'a'`         | 2            | -                    | 0      |
 | 2  | `'a'`         | 2            | `'a'`                | 1      |
@@ -125,5 +127,9 @@ Final step:
 |-------------------------|--------------------------------|
 | `return` value          | `6`                           |
 
+**334. Increasing Triplet Subsequence**
 
+Link: https://leetcode.com/problems/increasing-triplet-subsequence/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: For given array that has size smaller than 3, simply return false. We create and initialise first and second element with value of max number. Inside a loop, if curr element is smaller/equal to the first element, assign curr elemtn to the first element; if curr element is smaller/equal to the second, assign again. Otherwies, return true. Finally, return false outside the loop. 
 
