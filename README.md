@@ -96,3 +96,34 @@ Link: https://leetcode.com/problems/reverse-words-in-a-string/?envType=study-pla
 Idea: We can think this qn in a reverse way as the target is to make 1234 to 4321. I spent a lot of time struggling about splitting the strings and ended up useless. 
 
 At first, we need to read them from right to left order. The hardest thing is to identify when will current index points to the start of each word (a complete word) -> whenever it meets spaces! At the main time, we also want a variable keep track of the position at the end of each word. Hence, we could make up a substring contains such particular word and put it into the result string. It would have the reversed order as the origin string. 
+
+**443. String Compression**
+
+Link: https://leetcode.com/problems/string-compression/description/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: First we directly return 1 if given array only has size of 1. We then have some variables to store the curr unique letter, counts consectutive times, and  keep track of the pos in chars where we overwrite the array. 
+
+There's a loop starts from second element all the way to the last element. Inside we check if the current letter in the array is the same as the curr unique letter, if yes we increment the counts otherwise overwrite the array at 'ind'th position, then increment ind. Meanwhile, if counts > 1, convert the count to a string (multi-digit numbers) and write each digit as a character. Update curr unique lett and reset counts at last.
+
+Finally, repeat above step to oervwriting last group into the array. Then return ind. 
+
+`Simulation Example 1: chars = ["a", "a", "b", "b", "c", "c", "c"]`
+
+| `i` | `currUniqueLett` | `repeatedTime` | `chars[]` (written part) | `index` |
+|----|----------------|--------------|----------------------|--------|
+| 1  | `'a'`         | 2            | -                    | 0      |
+| 2  | `'a'`         | 2            | `'a'`                | 1      |
+| 3  | `'b'`         | 1            | `'a', '2'`           | 2      |
+| 4  | `'b'`         | 2            | -                    | 2      |
+| 5  | `'c'`         | 1            | `'a', '2', 'b', '2'` | 4      |
+| 6  | `'c'`         | 2            | -                    | 4      |
+| 7  | `'c'`         | 3            | -                    | 4      |
+
+Final step:
+
+| `chars[]` after the loop | `'a', '2', 'b', '2', 'c', '3'` |
+|-------------------------|--------------------------------|
+| `return` value          | `6`                           |
+
+
+
