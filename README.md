@@ -133,3 +133,8 @@ Link: https://leetcode.com/problems/increasing-triplet-subsequence/?envType=stud
 
 Idea: For given array that has size smaller than 3, simply return false. We create and initialise first and second element with value of max number. Inside a loop, if curr element is smaller/equal to the first element, assign curr elemtn to the first element; if curr element is smaller/equal to the second, assign again. Otherwies, return true. Finally, return false outside the loop. 
 
+**283. Move Zeroes** 
+
+Link: https://leetcode.com/problems/move-zeroes/description/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: Using two pointers such that for any curr ind are not equal to 0, swap the value of left and right. This moves all non-zeroes integer to LHS, and all zeroes integer to RHS after a loop. 
