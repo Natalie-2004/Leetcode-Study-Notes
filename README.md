@@ -1,5 +1,7 @@
 # Leetcode-Study-Notes
 
+One Day One Qn :)
+
 **1. Two Sum**
 
 Link: https://leetcode.com/problems/two-sum/description/
@@ -138,3 +140,9 @@ Idea: For given array that has size smaller than 3, simply return false. We crea
 Link: https://leetcode.com/problems/move-zeroes/description/?envType=study-plan-v2&envId=leetcode-75
 
 Idea: Using two pointers such that for any curr ind are not equal to 0, swap the value of left and right. This moves all non-zeroes integer to LHS, and all zeroes integer to RHS after a loop. 
+
+**392. Is Subsequence**
+
+Link: https://leetcode.com/problems/is-subsequence/description/?source=submission-noac
+
+Idea: Forgot to check if s is empty. We have a count to accumulate the times that the letter at String t that current j pointing to equals to the letter at the String s. The iteration is almost the size of t's length. Once the counts exactuly equals to the length of String s, return true. Otherwise return false after the loop ends. 
