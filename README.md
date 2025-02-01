@@ -146,3 +146,9 @@ Idea: Using two pointers such that for any curr ind are not equal to 0, swap the
 Link: https://leetcode.com/problems/is-subsequence/description/?source=submission-noac
 
 Idea: Forgot to check if s is empty. We have a count to accumulate the times that the letter at String t that current j pointing to equals to the letter at the String s. The iteration is almost the size of t's length. Once the counts exactuly equals to the length of String s, return true. Otherwise return false after the loop ends. 
+
+**11. Container With Most Water**
+
+Link: https://leetcode.com/problems/container-with-most-water/description/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: this question has very misleading descriptions and useless testcase. One of the biggest challenege is to figure out how to calculate the area correctly. It should be the min height of two lines! Once we come across it, just use two pointers lo and hi, with one starting from 0 and another starting from the length - 1. Plus compare the height of two pointers, move opposite pointer toward the middle pivot if one end is higher height. 
