@@ -152,3 +152,9 @@ Idea: Forgot to check if s is empty. We have a count to accumulate the times tha
 Link: https://leetcode.com/problems/container-with-most-water/description/?envType=study-plan-v2&envId=leetcode-75
 
 Idea: this question has very misleading descriptions and useless testcase. One of the biggest challenege is to figure out how to calculate the area correctly. It should be the min height of two lines! Once we come across it, just use two pointers lo and hi, with one starting from 0 and another starting from the length - 1. Plus compare the height of two pointers, move opposite pointer toward the middle pivot if one end is higher height. 
+
+**1679. Max Number of K-Sum Pairs**
+
+Link: https://leetcode.com/problems/max-number-of-k-sum-pairs/description/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: a typical two pointer qn. At first we initialise two pointers lo and hi, assign with values 0 and .length - 1 respectively. And we have another variable call counts to notice the times that two numbers made up of sum k. Then we have a loop and it terminates whenever hi <= lo. Inside the loop, we check if the sum made of from nums[lo] and nums[hi] equals to k, if yes then increase the counts and lo, decrease hi as well; if not, we handle cases when curr sum is smaller/larger to k, then we increasing/decreasing lo/hi. Return the counts at the end. 
