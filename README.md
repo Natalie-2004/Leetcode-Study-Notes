@@ -158,3 +158,9 @@ Idea: this question has very misleading descriptions and useless testcase. One o
 Link: https://leetcode.com/problems/max-number-of-k-sum-pairs/description/?envType=study-plan-v2&envId=leetcode-75
 
 Idea: a typical two pointer qn. At first we initialise two pointers lo and hi, assign with values 0 and .length - 1 respectively. And we have another variable call counts to notice the times that two numbers made up of sum k. Then we have a loop and it terminates whenever hi <= lo. Inside the loop, we check if the sum made of from nums[lo] and nums[hi] equals to k, if yes then increase the counts and lo, decrease hi as well; if not, we handle cases when curr sum is smaller/larger to k, then we increasing/decreasing lo/hi. Return the counts at the end. 
+
+**1732. Find the Highest Altitude**
+
+Link: https://leetcode.com/problems/find-the-highest-altitude/description/?envType=study-plan-v2&envId=leetcode-75
+
+Idea: start by creating two variables: currAlt and maxAlt, both set to 0. Then accumulate the curr alt that i is poingting to as currAlt and reset maxAlt is currAlt has larger value, iteratively. return maxAlt at the end.
