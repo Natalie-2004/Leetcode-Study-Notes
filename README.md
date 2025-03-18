@@ -164,3 +164,9 @@ Idea: a typical two pointer qn. At first we initialise two pointers lo and hi, a
 Link: https://leetcode.com/problems/find-the-highest-altitude/description/?envType=study-plan-v2&envId=leetcode-75
 
 Idea: start by creating two variables: currAlt and maxAlt, both set to 0. Then accumulate the curr alt that i is poingting to as currAlt and reset maxAlt is currAlt has larger value, iteratively. return maxAlt at the end.
+
+**704. Binary Search**
+
+Link: https://leetcode.com/problems/binary-search/
+
+Idea: First time done using linear approach with O(n). How can we improve the time complexity? In fact we could use binary search. By initialising lo and hi pointers, we are able to get the mid element at each iteration. Compare target with the values that mid is pointing to, cases that array[mid] is greater than target, target must locate at LHS of the array and hence update the range of hi pointer; cases that is smaller than target, it must locate at RHS of the array and hence update the range of lo pointer. Eventually when we find the target the program should return it otherwise return -1. Do remember to handle edge case. 
