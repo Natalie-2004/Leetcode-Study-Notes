@@ -170,3 +170,20 @@ Idea: start by creating two variables: currAlt and maxAlt, both set to 0. Then a
 Link: https://leetcode.com/problems/binary-search/
 
 Idea: First time done using linear approach with O(n). How can we improve the time complexity? In fact we could use binary search. By initialising lo and hi pointers, we are able to get the mid element at each iteration. Compare target with the values that mid is pointing to, cases that array[mid] is greater than target, target must locate at LHS of the array and hence update the range of hi pointer; cases that is smaller than target, it must locate at RHS of the array and hence update the range of lo pointer. Eventually when we find the target the program should return it otherwise return -1. Do remember to handle edge case. 
+
+**35. Search Insert Position**
+
+Link: https://leetcode.com/problems/search-insert-position/description/
+
+Idea: Typical binary search qn. Here we consider four cases:
+- In front of all elem of a array,
+- Equals to some elem in the array,
+- In between two elems,
+- After all elems
+
+Let's solve using brute force first. We only consider cases 1 - 3 and case 4. That is, inside a loop: if nums[i] >= target return i, and after return nums.length to indicate case 4. 
+Similarity, in our binary search, we compare the target with nums[mid]:
+- if is smaller, update hi;
+- if is larger, update lo;
+- otherwise return mid; (Case 2)
+At the end, handle Case 3 and Case 4 by directly return hi + 1;
