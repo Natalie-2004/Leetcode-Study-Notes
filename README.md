@@ -187,3 +187,16 @@ Similarity, in our binary search, we compare the target with nums[mid]:
 - if is larger, update lo;
 - otherwise return mid; (Case 2)
 At the end, handle Case 3 and Case 4 by directly return hi + 1;
+
+**26. Remove Duplicates from Sorted Array**
+
+Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+
+Basically swapping the element to be deleted: duplicated ones with the next one that's not same with the element needed to be delete.
+We need to counter: slow and fast. The slow one tracks the current elem while the fast one tracks the next unique element
+
+Given array [0,0,1,1,1,2,2,3,3,4]
+                      s  f
+We first initialise slow to 0 and fast to slow + 1.
+While iterating, fast is the first to move forward. Once it reaches to the next unique element, the next position of the slow counter is going to be placed by the exact value of fast pointing to. Then, increment both counters.
+At the end, simply return slow + 1, indicating the number of unique elem. 
