@@ -200,3 +200,9 @@ Given array [0,0,1,1,1,2,2,3,3,4]
 We first initialise slow to 0 and fast to slow + 1.
 While iterating, fast is the first to move forward. Once it reaches to the next unique element, the next position of the slow counter is going to be placed by the exact value of fast pointing to. Then, increment both counters.
 At the end, simply return slow + 1, indicating the number of unique elem. 
+
+**122. Best Time to Buy and Sell Stock II**
+
+Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/
+
+Draw a Day VS. Prices line chart. At first we initialise a max profit counter. Inside the loop up to n-1, we compare if the curr elem's next elem is higher, we then increase max profit by the diff between next and curr. At the end return back the max profit. 
