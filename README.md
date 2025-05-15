@@ -221,3 +221,9 @@ combine them together -> 7 6 5 4 3 2 1
 
 The first step reverse the entire array, then, reverse the first k elem in the array. Finally, reverse the num.length - k elem.
 To handle edge cases when k = 36 (divide by the array size) and to make the fn faster, just mod k. 
+
+**217. Contains Duplicate**
+
+Link: https://leetcode.com/problems/contains-duplicate/description/
+
+Create a hashset to keep track of unique elem in the array. Inside the loop, if the set doesn't contain such elem, append; otherwise, return false indicating dup elem. 
