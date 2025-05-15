@@ -206,3 +206,18 @@ At the end, simply return slow + 1, indicating the number of unique elem.
 Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/
 
 Draw a Day VS. Prices line chart. At first we initialise a max profit counter. Inside the loop up to n-1, we compare if the curr elem's next elem is higher, we then increase max profit by the diff between next and curr. At the end return back the max profit. 
+
+**189. Rotate Array**
+
+Link: https://leetcode.com/problems/rotate-array/description/
+
+Input: nums = [1,2,3,4,5,6,7], k = 3
+Output: [5,6,7,1,2,3,4]
+
+Note: we can't define another array, out of space. Try to work backward to get some insights. 
+Reverse the first k elem in the arrat: subarray1 = [7 6 5]
+then reverse rest of them: subarray2 = [4 3 2 1]
+combine them together -> 7 6 5 4 3 2 1
+
+The first step reverse the entire array, then, reverse the first k elem in the array. Finally, reverse the num.length - k elem.
+To handle edge cases when k = 36 (divide by the array size) and to make the fn faster, just mod k. 
