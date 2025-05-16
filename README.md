@@ -227,3 +227,16 @@ To handle edge cases when k = 36 (divide by the array size) and to make the fn f
 Link: https://leetcode.com/problems/contains-duplicate/description/
 
 Create a hashset to keep track of unique elem in the array. Inside the loop, if the set doesn't contain such elem, append; otherwise, return false indicating dup elem. 
+
+**136. Single Number**
+
+Link: https://leetcode.com/problems/single-number/description/
+
+A tricky question involves bitwise operation.
+Given this example [4 1 2 1 2]
+
+For the first iter, the temp = 0 ^ 4 -> 0100 = 4
+second iter, temp = 4 ^ 1 = 5
+third iter, temp = 5 ^ 2 = 7
+forth iter, temp = 7 ^ 1 = 0111 ^ 0001 = 0110 = 6
+fifth iter, temp = 6 ^ 2 = 0110 ^ 0010 = 4 
