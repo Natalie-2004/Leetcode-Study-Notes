@@ -240,3 +240,18 @@ second iter, temp = 4 ^ 1 = 5
 third iter, temp = 5 ^ 2 = 7
 forth iter, temp = 7 ^ 1 = 0111 ^ 0001 = 0110 = 6
 fifth iter, temp = 6 ^ 2 = 0110 ^ 0010 = 4 
+
+**350. Intersection of Two Arrays II**
+
+Link: https://leetcode.com/problems/intersection-of-two-arrays-ii/
+
+nums1 = [4 5 9] -> <4:1, 5:1, 9:1>
+nums2 = [4 4 8 9 9]
+
+At first we iterate through nums1, appending each value of that array into a new created hashtable. The key is the elem whilist the value is the frequency of the elem. Every time the hashtable contains a elem that matches the nums1 array, we increase its frequency. Otherwise, append the key and value into the table.
+
+Then iterate through nums2. At each iteration, check if the current elem exist in the hashtable. If it exist, add this elem to the arraylist and then substract 1 from the frequency. If the frequency of an elem happen to be zero, we remove from the hashtable. 
+
+Then, create a result array and then maps the intersec arraylist into it and then return. 
+
+Time complexity: at worst time, 1 and 2 has n elem and they're all intersected. We have three loops. Our time complexity is O(3n) = O(n)
