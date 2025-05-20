@@ -255,3 +255,9 @@ Then iterate through nums2. At each iteration, check if the current elem exist i
 Then, create a result array and then maps the intersec arraylist into it and then return. 
 
 Time complexity: at worst time, 1 and 2 has n elem and they're all intersected. We have three loops. Our time complexity is O(3n) = O(n)
+
+**66. Plus One**
+
+Link: https://leetcode.com/problems/plus-one/description/
+
+We group into three cases. Case 1: the last digit is not 9, only add 1 to last digit and then return; Case 2: the last digit is 9, trailing 9 changes the digits from left to right until the curr digit is no longer 9, then increment 1; Case 3: all of digits are 9, we must create a new array with size of current array + 1 as the size of java array is immutable once created. In order to do these, we need a coounter. 
