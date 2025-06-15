@@ -259,18 +259,7 @@ We group into three cases. Case 1: the last digit is not 9, only add 1 to last d
 
 Link: https://leetcode.com/problems/3sum/description/
 
-First of first sort -> [-4 -1 -1 0 1 2], as we plan to use double pointers.
-                         i  l        r
-							 
-the i points at -4, for the rest of the numbers we want to find nums that adds up to 4. -4 + 4 = 0.
-hence, we transform this question similar to 2 sums. 
-
-note: once there's a matching triplet we need to exclude the same numbers at next iterations as we don't need duplicates. 
-For example [-2 0 0 2 2]
-              i   l r  
-res = [[-2 0 2],  [-2 0 2]], which is repeated
-
-time complexity: We have an outer loop that, at worst case, iterates through the entire array, likewise the inner loops. O(n^2).
+<img width="759" alt="image" src="https://github.com/user-attachments/assets/f976225d-8763-4afd-996b-9be430076679" />  
 
 **21. Merge Two Sorted Lists**
 
@@ -287,3 +276,12 @@ Construct a temp head node 0 and a curr node points to the head node. We have po
 res: 0 -> 1 -> 1 -> 2 -> 3 -> 4 -> 4. At the end, the head points to 0 and curr points to 4. We return head.next.
 
 Time complexity: at the worst case, iterating both lists, O(n+m). 
+
+**234. Palindrome Linked List**
+
+Link: https://leetcode.com/problems/palindrome-linked-list/description/
+
+<img width="795" alt="image" src="https://github.com/user-attachments/assets/5908b405-d354-4198-8f7f-172a76c76d3e" />  
+
+
+
