@@ -261,3 +261,20 @@ Time complexity: at worst time, 1 and 2 has n elem and they're all intersected. 
 Link: https://leetcode.com/problems/plus-one/description/
 
 We group into three cases. Case 1: the last digit is not 9, only add 1 to last digit and then return; Case 2: the last digit is 9, trailing 9 changes the digits from left to right until the curr digit is no longer 9, then increment 1; Case 3: all of digits are 9, we must create a new array with size of current array + 1 as the size of java array is immutable once created. In order to do these, we need a coounter. 
+
+**15. 3Sum**
+
+Link: https://leetcode.com/problems/3sum/description/
+
+First of first sort -> [-4 -1 -1 0 1 2], as we plan to use double pointers.
+                         i  l        r
+							 
+the i points at -4, for the rest of the numbers we want to find nums that adds up to 4. -4 + 4 = 0.
+hence, we transform this question similar to 2 sums. 
+
+note: once there's a matching triplet we need to exclude the same numbers at next iterations as we don't need duplicates. 
+For example [-2 0 0 2 2]
+              i   l r  
+res = [[-2 0 2],  [-2 0 2]], which is repeated
+
+time complexity: We have an outer loop that, at worst case, iterates through the entire array, likewise the inner loops. O(n^2).
