@@ -20,13 +20,6 @@ Brute Force: Iterate from the first number, and add up with the second number to
 Idea:
 Brute Force did not imply the characteristic of a sorted increasing array. As it's LHS has the smallest number and RHS has the largest number, we add them up and compare this number with the target sum. We remove the current rightmost number if it's larger than the sum, and the current leftmost number if it's smaller. O(n) -> takes O(1) to remove a number and n times to iterate.
 
-**15. 3Sum**
-
-Link: https://leetcode.com/problems/3sum/description/
-
-Idea:
-This qn has given us an unsorted array, the first step is to make them in order first. Given that we have three indexes to find, i.e. i, j, k and i < j < k, the max length of the iteration of i is range - 2 indeed. This array also needs to consider cases where repeated numbers exist.
-
 **206. Reverse Linked List**
 
 Link: https://leetcode.com/problems/reverse-linked-list/description/
@@ -278,3 +271,19 @@ For example [-2 0 0 2 2]
 res = [[-2 0 2],  [-2 0 2]], which is repeated
 
 time complexity: We have an outer loop that, at worst case, iterates through the entire array, likewise the inner loops. O(n^2).
+
+**21. Merge Two Sorted Lists**
+
+Link: https://leetcode.com/problems/merge-two-sorted-lists/description/
+
+We have two lists:
+l1:  1 -> 2 -> 4
+				i
+l2:  1 -> 3 -> 4
+       j
+			 
+Construct a temp head node 0 and a curr node points to the head node. We have pointers i, j pointing to l1 and l2, respectively, starting with the smallest values (the heads). If the pointers point to the same values, i.e. 1 and 1, the insert order doesn't matter; otherwise, place the smaller value and then update the list. Once any list reaches the end and points to a null, the rest of another list is appened to the result list directly.
+
+res: 0 -> 1 -> 1 -> 2 -> 3 -> 4 -> 4. At the end, the head points to 0 and curr points to 4. We return head.next.
+
+Time complexity: at the worst case, iterating both lists, O(n+m). 
