@@ -283,5 +283,12 @@ Link: https://leetcode.com/problems/palindrome-linked-list/description/
 
 <img width="795" alt="image" src="https://github.com/user-attachments/assets/5908b405-d354-4198-8f7f-172a76c76d3e" />  
 
+**141. Linked List Cycle**
 
+Link: https://leetcode.com/problems/linked-list-cycle/description/
+
+The hardest point is How to determine if there's a cycle here?  
+We use two pointers algorithm, having a slow pointer move once and fast pointer move twice. Every time check if slow is equal to fast. If fast is null then we know there's no cycle, otherwise there's a cycle as there's no way fast and slow points together ( expect the starting point.
+
+Time Complexity: O(n). 
 
